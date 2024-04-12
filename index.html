@@ -114,17 +114,13 @@
                         // // Set the position and rotation of the model based on the reticle
                         // model.position.setFromMatrixPosition(reticle.matrix);
                         // model.quaternion.setFromRotationMatrix(reticle.matrix);
-
-                        // Add the model to the scene
-                        scene.add(model);
                     },
-                    function (xhr) {
-		      // console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
-	      },
+                    undefined,
                     function (error) {
                         console.error('Error loading GLTF model', error);
                     }
                 );
+                scene.add(loader);
             }
         }
 
